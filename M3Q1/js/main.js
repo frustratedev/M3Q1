@@ -1,6 +1,11 @@
 //Bedroom Remake
 //Materials used - MeshLambert, MeshPhong, MeshStandard
 //Lights used - Ambient, Directional, Pointlight
+
+//Changes
+//Added lighting in the scene, created a lamp to accentuate lighting. 
+//Experimented with materials to make objects more detailed.
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 1, 1000 );
 
@@ -75,8 +80,8 @@ scene.add(blanket);
 
 //Lamp
 //Wall mounted base 
-const lamp_base_geo = new THREE.BoxGeometry(4,1,4);
-const lamp_base = new THREE.Mesh(lamp_base_geo, wood);
+const lamp_base_geom = new THREE.BoxGeometry(4,1,4);
+const lamp_base = new THREE.Mesh(lamp_base_geom, wood);
 lamp_base.position.set(-39,-12,-29);
 scene.add(lamp_base);
 
